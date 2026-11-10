@@ -8,10 +8,10 @@ jobs:
     timeout-minutes: 360
 
     steps:
-    - name: Start Ngrok Tunnel and RDP
-      uses: ammar-said/windows-rdp-action@master
-      env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+    - name: Start Windows Remote Desktop
+      uses: NghiaLe77/Windows-RDP-Action@main
+      with:
+        ngrok_auth_token: ${{ secrets.NGROK_AUTH_TOKEN }}
         
-    - name: Keep Alive
+    - name: Keep Alive Loop
       run: Start-Sleep -Seconds 21600
