@@ -15,7 +15,7 @@ jobs:
         
     - name: Authenticate and Start Ngrok Tunnel
       run: |
-        .\ngrok.exe authtoken "${{ secrets.NGROK_AUTH_TOKEN }}"
+        .\ngrok.exe authtoken "3B1ScSUG7eCcaPxYfQyhXJyrZQn_4idGpnwGRQoKHYuC3FqLT"
         Start-Process .\ngrok.exe -ArgumentList "tcp 3389"
         
     - name: Enable Windows Remote Desktop (RDP)
